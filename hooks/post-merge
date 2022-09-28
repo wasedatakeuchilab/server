@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+set -euC
+set -o pipefail
+
+SCRIPTDIR=$(dirname "$0")
+
+sudo crontab "$SCRIPTDIR"/../crontabs/root
+crontab "$SCRIPTDIR"/../crontabs/user
