@@ -1,0 +1,10 @@
+
+# Power management
+# Waking 9:00-21:00 except Saturday and Sunday
+0 12 * * mon-thu wakealarm.sh 21
+0 12 * * fri wakealarm.sh 69
+0 21 * * * shutdown now
+
+# Package management
+0 10 * * * apt-get update && apt-get upgrade -y >> /var/log/cron/apt-upgrade.log
+30 10 * * * apt-get autoremove -y >> /var/log/cron/apt-autoremove.log
