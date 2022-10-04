@@ -34,7 +34,9 @@ version-resolver:
   default: patch
 template: |
   ## Changes
+
   $CHANGES
+
 autolabeler:
   - label: feature
     branch:
@@ -48,6 +50,7 @@ autolabeler:
     branch:
       - /^chore[/-].+/
       - /^internal[/-].+/
+      - /pre-commit-ci-update-config/
   - label: refactor
     branch:
       - /ref(actor)?[/-].+/
