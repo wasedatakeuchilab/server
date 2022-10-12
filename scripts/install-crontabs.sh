@@ -12,6 +12,6 @@ sudo chown root:root /etc/logrotate.d/cronlog.conf
 if [ ! -d /var/log/cron ]; then
     sudo mkdir -p /var/log/cron
 fi
-sudo cp "$SCRIPTS_DIR"/wakealarm.sh /usr/bin/
-sudo chmod 544 /usr/bin/wakealarm.sh
-sudo chown root:root /usr/bin/wakealarm.sh
+sudo cp "$SCRIPTS_DIR"/wakealarm.sh /usr/local/bin/
+sudo chmod 544 /usr/local/bin/wakealarm.sh
+sudo chown root:root /usr/local/bin/wakealarm.sh
