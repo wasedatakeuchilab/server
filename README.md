@@ -32,7 +32,7 @@ Run [setup-proxy.sh](./scripts/setup-proxy.sh) as a `sudo` user.
 ./scripts/setup-proxy.sh
 ```
 
-Then login again or reboot and the Internet is available for most of applications on the machine.
+Then login again or reboot and the Internet is available for most applications on the machine.
 
 ### Run the setup script
 
@@ -48,7 +48,7 @@ The script is going to:
 - install [Docker]
 - install [MicroK8s]
 - install crontabs for Cron
-- install git hooks for the cloned repogitory
+- install Git hooks for the cloned repogitory
 
 ## Mount LAN disk
 
