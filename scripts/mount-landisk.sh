@@ -13,5 +13,5 @@ fi
 
 {
     OPTIONS="credentials=$SMBCREDS_FILEPATH,nosuid,noexec,nodev,rw,vers=1.0"
-    echo "$LANDISK_IPADDRESS $MOUNT_POINT cifs $OPTIONS"    
+    echo "//$LANDISK_IPADDRESS/disk $MOUNT_POINT cifs $OPTIONS"    
 } | sudo tee -a /etc/fstab
