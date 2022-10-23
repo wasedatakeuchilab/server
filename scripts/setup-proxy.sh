@@ -5,7 +5,7 @@ set -o pipefail
 
 WASEDA_PROXY="http://www-proxy.waseda.jp:8080"
 ENVFILE="/etc/environment"
-NO_PROXY="10.0.0.0/8,192.168.0.0/16,127.0.0.1"
+NO_PROXY="172.0.0.0/8,10.0.0.0/8,192.168.0.0/16,127.0.0.1,localhost,local,svc,titan,colossus,behemoth"
 
 {
     echo "http_proxy=$WASEDA_PROXY"
