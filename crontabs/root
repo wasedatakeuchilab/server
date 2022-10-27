@@ -6,5 +6,4 @@
 0 23 * * * shutdown now
 
 # Package management
-0 10 * * * apt-get update && apt-get upgrade -y >> /var/log/cron/apt-upgrade.log
-30 10 * * * apt-get autoremove -y >> /var/log/cron/apt-autoremove.log
+0 10 * * * apt-upgrade.sh
