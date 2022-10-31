@@ -3,9 +3,9 @@
 This repo provides how to manage servers in Takeuchi Lab.
 
 - [Supported OS](#supported-os)
-- [Setup a server](#setup-a-server)
+- [Set up a server](#setup-a-server)
   - [Clone the repo](#clone-the-repo)
-  - [Setup HTTP proxy](#setup-http-proxy)
+  - [Set up HTTP proxy](#setup-http-proxy)
   - [Run the setup script](#run-the-setup-script)
 - [Mount LAN disk](#mount-lan-disk)
 - [Mount USB drive](#mount-usb-drive)
@@ -15,7 +15,7 @@ This repo provides how to manage servers in Takeuchi Lab.
 - Ubuntu Server 20.04 LTS
 - Ubuntu Server 22.04 LTS
 
-## Setup a server
+## Set up a server
 
 ### Clone the repo
 
@@ -24,9 +24,9 @@ git clone https://github.com/wasedatakeuchilab/server
 cd server
 ```
 
-### Setup HTTP proxy
+### Set up HTTP proxy
 
-Run [setup-proxy.sh](./scripts/setup-proxy.sh) as a `sudo` user.
+Run [setup-proxy.sh](./scripts/setup-proxy.sh) as `sudo` user.
 
 ```sh
 ./scripts/setup-proxy.sh
@@ -36,7 +36,7 @@ Then login again or reboot and the Internet is available for most applications o
 
 ### Run the setup script
 
-Run [setup.sh](./scripts/setup.sh) as a `sudo` user.
+Run [setup.sh](./scripts/setup.sh) as `sudo` user.
 
 ```sh
 ./scripts/setup.sh
@@ -52,11 +52,17 @@ The script is going to:
 
 ## Mount LAN disk
 
-TODO: Write how to mount the LAN disk
+Run [setup-landisk-mount.sh](./scripts/setup-landisk-mount.sh) as `sudo` user.
+
+```sh
+./scripts/setup-landisk-mount.sh
+```
+
+:warning: Note that the script must not be run twice.
 
 ## Mount USB drive
 
-TODO: Write how to mount a USB drive
+TODO: Describe how to mount a USB drive
 
 [docker]: https://www.docker.com/
 [microk8s]: https://microk8s.io/
