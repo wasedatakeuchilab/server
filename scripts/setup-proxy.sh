@@ -5,7 +5,7 @@ set -o pipefail
 
 WASEDA_PROXY="http://www-proxy.waseda.jp:8080"
 ENVFILE="/etc/environment"
-LOCAL_ADDRESS="192.168.0.0/16,local"
+LOCAL_ADDRESS="192.168.0.0/24,local,lab"
 DOCKER_ADDRESS="172.0.0.0/8"
 K8S_ADDRESS="10.0.0.0/8,svc"
 NO_PROXY="127.0.0.1,localhost,$LOCAL_ADDRESS,$DOCKER_ADDRESS,$K8S_ADDRESS"
