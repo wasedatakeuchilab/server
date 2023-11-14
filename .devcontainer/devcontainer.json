@@ -1,10 +1,8 @@
 {
   "name": "Debian",
   "image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
-  "mounts": [],
-  "runArgs": [],
   "features": {
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+    "ghcr.io/devcontainers-contrib/features/apt-packages:1": {
       "packages": "bash-completion"
     },
     "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
@@ -12,9 +10,10 @@
   },
   "customizations": {
     "vscode": {
-      "settings": {},
       "extensions": [
         "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
         "ms-azuretools.vscode-docker",
         "redhat.vscode-yaml",
         "timonwong.shellcheck",
@@ -24,6 +23,5 @@
   },
   "postCreateCommand": {
     "install pre-commit": "pre-commit install"
-  },
-  "remoteUser": "vscode"
+  }
 }
