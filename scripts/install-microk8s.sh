@@ -10,5 +10,5 @@ sudo usermod -aG microk8s "$USER"
 sudo chown -fR "$USER" ~/.kube
 
 if [ ! -f ~/.kube/config ]; then
-    microk8s config > ~/.kube/config
+  microk8s config >~/.kube/config
 fi

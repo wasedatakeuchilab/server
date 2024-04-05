@@ -12,21 +12,21 @@ NO_PROXY="127.0.0.1,localhost,$LOCAL_ADDRESS,$DOCKER_ADDRESS,$K8S_ADDRESS"
 
 # For microK8s
 SERVER_NAMES=(
-    "titan"
-    "colossus"
-    "behemoth"
+  "titan"
+  "colossus"
+  "behemoth"
 )
 for name in "${SERVER_NAMES[@]}"; do
-    NO_PROXY+=",$name"
+  NO_PROXY+=",$name"
 done
 
 {
-    echo "http_proxy=$WASEDA_PROXY"
-    echo "https_proxy=$WASEDA_PROXY"
-    echo "no_proxy=$NO_PROXY"
-    echo "HTTP_PROXY=$WASEDA_PROXY"
-    echo "HTTPS_PROXY=$WASEDA_PROXY"
-    echo "NO_PROXY=$NO_PROXY"
+  echo "http_proxy=$WASEDA_PROXY"
+  echo "https_proxy=$WASEDA_PROXY"
+  echo "no_proxy=$NO_PROXY"
+  echo "HTTP_PROXY=$WASEDA_PROXY"
+  echo "HTTPS_PROXY=$WASEDA_PROXY"
+  echo "NO_PROXY=$NO_PROXY"
 } | sudo tee -a "$ENVFILE"
 
 # For Docker

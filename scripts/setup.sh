@@ -11,12 +11,12 @@ SCRIPTS_DIR=$(dirname "$0")
 
 # Install docker
 if [ -z "$(which docker)" ]; then
-    ./"$SCRIPTS_DIR"/install-docker.sh
+  ./"$SCRIPTS_DIR"/install-docker.sh
 fi
 
 # Install microk8s
 if [ -z "$(which microk8s)" ]; then
-    ./"$SCRIPTS_DIR"/install-microk8s.sh
+  ./"$SCRIPTS_DIR"/install-microk8s.sh
 fi
 
 # Install crontab
